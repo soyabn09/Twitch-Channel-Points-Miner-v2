@@ -486,7 +486,7 @@ class TwitchChannelPointsMiner:
                     - self.original_streamers[streamer_index]
                 )
                 logger.info(
-                    f"{repr(self.streamers[streamer_index])}, Total Points Gained (after farming - before farming): {_millify(gained)}",
+                    f"{repr(self.streamers[streamer_index])}, Total Points Gained (after farming - before farming): {gained}",
                     extra={"emoji": ":robot:"},
                 )
                 if self.streamers[streamer_index].history != {}:

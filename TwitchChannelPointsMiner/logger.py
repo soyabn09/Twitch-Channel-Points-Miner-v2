@@ -172,7 +172,7 @@ class GlobalFormatter(logging.Formatter):
             and record.emoji_is_present is False
         ):
             record.msg = emoji.emojize(
-                f"{record.emoji}  {record.msg.strip()}", language="alias"
+                f"{record.emoji}  {record.msg.strip()}", language='alias'
             )
             record.emoji_is_present = True
 
@@ -221,7 +221,7 @@ class GlobalFormatter(logging.Formatter):
             and self.settings.discord.webhook_api
             != "https://discord.com/api/webhooks/0123456789/0a1B2c3D4e5F6g7H8i9J"
         ):
-            self.settings.discord.send(record.msg, record.event)
+            self.settings.discord.send(record.msg, record.event, record)
 
     def webhook(self, record):
         skip_webhook = False if hasattr(
